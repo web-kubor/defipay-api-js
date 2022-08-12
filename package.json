@@ -1,0 +1,8 @@
+{
+  "name": "defipay-sdk",
+  "version": "1.0.0",
+  "description": "v1.0.1",
+  "main": "index.js",
+  "author": "(http://wangenbo.cn/)",
+  "license": "MIT"
+}
