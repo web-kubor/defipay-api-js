@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "description": "v1.0.1",
   "main": "index.js",
+  "depoly": "sh -x ./vite_utils/depoly.sh",
+  "scripts": {
+    "dev": "liveserver",
+    "depoly": "sh -x depoly.sh"
+  },
   "author": "(http://wangenbo.cn/)",
   "license": "MIT"
 }

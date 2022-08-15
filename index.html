@@ -12,10 +12,12 @@
       Loading...
     </div>
   </body>
-  <script src="./index.js"></script>
+  <script src="https://tarspay.com/defipay-payment.js"></script>
   <script>
     window.defipaySdk.init({
       el: "defipay",
+      env: "test",
+      publicKey: "XXXXXXX",
       httpReturnSuccess: "https://domain.tld/success",
       httpReturnFailed: "https://domain.tld/failed",
     });
