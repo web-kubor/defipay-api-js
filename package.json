@@ -5,7 +5,7 @@
   "main": "index.js",
   "depoly": "sh -x ./vite_utils/depoly.sh",
   "scripts": {
-    "dev": "liveserver",
+    "dev": "live-server",
     "depoly": "sh -x depoly.sh"
   },
   "author": "(http://wangenbo.cn/)",

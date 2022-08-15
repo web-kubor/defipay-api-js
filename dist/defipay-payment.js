@@ -2,7 +2,14 @@ window.defipaySdk = {};
 
 window.defipaySdk.init = (params) => {
   if (!params.el) {
-    throw "没有初始化的DOM ID";
+    throw("没有初始化的DOM ID");
+  }
+  if (!params.streamingId) {
+    throw("没有流水号");
+  }
+  let host = "https://defipay.biz/customer/#/order/"
+  if (params.env === "test")  {
+   host = "https://test.defipay.biz/customer/#/order/"
   }
   let dom = getDom(params.el);
   console.log('%c%s', 'color: #00a3cc', "初始化参数", params);
@@ -11,7 +18,8 @@ window.defipaySdk.init = (params) => {
   var iframe = document.createElement('iframe'); 
   iframe.width = "100%"
   iframe.height = "1100px"
-  iframe.src="http://192.168.50.71:3003/#/order/Y10LTFT5"; 
+  iframe.src= host + params.streamingId; 
+  console.log('%c%s', 'color: #aa00ff',  iframe.src);
   dom.appendChild(iframe);
 };
 

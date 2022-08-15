@@ -2,24 +2,34 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+  <link rel="icon" href="/favicon.ico" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="index.css">
-    <title>测试集成SDK</title>
+    <title>One-click integrated cashier</title>
   </head>
   <body>
-    <div id="defipay" style="min-height: 500px; max-width: 450px; width: 100%">
-      Loading...
+    <div  class="defipay-view">
+      <div id="defipay" style="min-height: 500px; max-width: 450px;">
+        Loading...
+      </div>
+      <div class="intro">
+         <h2>一键拉起收银台</h2>
+
+         <button>按钮一键拉起收银台</button>
+      </div>
     </div>
   </body>
   <script src="https://tarspay.com/defipay-payment.js"></script>
   <script>
     window.defipaySdk.init({
-      el: "defipay",
-      env: "test",
-      publicKey: "XXXXXXX",
-      httpReturnSuccess: "https://domain.tld/success",
-      httpReturnFailed: "https://domain.tld/failed",
+      el: "defipay", //必填
+      env: "test", // 必填 test  or production
+      publicKey: "公钥", // 必填
+      streamingId: "11111", //流水号
+      currency: "ETH", //选填
+      currencyNumber: "1",  //选填
+      httpReturnFailed: "https://domain.tld/failed",  // fail  callback
     });
   </script>
 </html>
