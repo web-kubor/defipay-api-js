@@ -2,7 +2,7 @@
   "name": "defipay-sdk",
   "version": "1.0.0",
   "description": "v1.0.1",
-  "main": "index.js",
+  "main": "dist/defipay-payment.js",
   "depoly": "sh -x ./vite_utils/depoly.sh",
   "scripts": {
     "dev": "live-server",
